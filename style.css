@@ -1,0 +1,486 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+header .brand img{
+    background: rgba(225, 0, 255, 0.782);
+    width: 60px;
+
+}
+header .navigation{
+    position: relative;
+}
+header .navigation .navigation-items a{
+    position: relative;
+    color: #403737;
+    font-size: 1em;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+
+}
+header .navigation .navigation-items a:before{
+  content: '';
+  position: absolute;
+  background: #d7c4c4;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+
+}
+header .navigation .navigation-items a:hover:before{
+
+    width: 100%;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url(Cool-Nature-Backgrounds-For-Desktop-2048x1174.jpg)no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    
+}
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(243, 100, 243, 0.742);
+    z-index: -1;
+
+
+}
+.main-heading{
+    color: white;
+    line-height: 1;
+    text-shadow: 1px 1px 1rem rgba(0,0,0,.5);
+    margin-bottom: 2.5rem;
+
+}
+.title{
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+}
+.subtitle{
+    font-size: 3.6rem;
+    font-weight: 300;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.btn{
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .5rem 3.5rem;
+    border : none;
+    border-radius: 10rem;
+    display: inline-flex;
+    align-items: center;
+    
+
+    
+}
+.btn-gradient{
+    background-image: linear-gradient(rgb(101, 243, 58),rgb(56, 247, 238),rgb(61, 146, 251));
+    margin-top: 27px;
+    margin-bottom: 7px;
+    text-decoration: none;
+
+}
+.btn-gradient:hover{
+    background-image: linear-gradient(rgb(105, 126, 244),rgb(246, 26, 239),rgb(247, 56, 196),);
+}
+.booking{
+    background-image: linear-gradient(rgb(237, 68, 243),rgb(193, 40, 240),rgb(202, 55, 246));
+    
+
+}
+.input-group{
+    margin-bottom: 1.5rem;
+
+}
+.input-label{
+    display: block;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.input,
+.options{
+    outline: none;
+    border: none;
+    width: 100%;
+    min-height: 4rem;
+    padding: 1rem;
+    font-weight: bold;
+    color: #a5a5a5;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    /*resize: none;*/
+}
+.form-btn{
+    margin-top: 2.5rem;
+    cursor: pointer;
+
+}
+.btn-purple{
+    background-color: purple;
+}
+.btn-purple:hover{
+    background-color: rgb(231, 15, 231);
+
+}
+
+.container1{
+    display: flex;
+    justify-content: center;
+}
+.container2 .grid .grid-items .featured-hotels img{
+    width: 20%;
+}
+.container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+.services .container .box img{
+    width: 20%;
+    padding-top: 1px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    grid-gap: 3px;
+
+}
+.box{
+    border: 2px solid white;
+    color: #ffffff;
+    text-align: center;
+    background: url(hotel1.jpg)no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services .container .box h3{
+    font-variant: small-caps;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.service .container .box .hotel-price{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.serviceh3{
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.9px;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+
+}
+.serviceh4{
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.img-gallery{
+    width: 80%;
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-gap: 30px;
+
+}
+.img-gallery img{
+    width: 100%;
+    cursor: pointer;
+}
+.img-gallery img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 7px rgba(68,77 ,1,1);
+
+}
+.full-img{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+
+}
+.full-img img{
+    width: 90%;
+    max-width: 500px;
+
+}
+.full-img  span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #f6f1f1;
+    cursor: pointer;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .containerb {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+::-webkit-scrollbar{
+    width: 0.3px;
+    height: 23px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: blueviolet;
+}
+::-webkit-scrollbar-track{
+    background: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1040px){
+    header{
+        padding: 12px 20px;
+    }
+    section{
+        padding: 100px 20px;
+    }
+    header .navigation{
+      display: none;
+    }
+    header .navigation.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1,1,1,0.5);
+  
+      }
+    header .navigation .navigation-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+    header .navigation.active .navigation-items{
+        background: #e7a533;
+          width: 500px;
+        max-width: 500px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgb(246, 244, 244), 0 0 20px rgb(234, 210, 210), 0 0 40px rgb(149, 187, 238);
+
+    }
+   /* header .navigation .navigation-items
+        /*  animation: animate 10s ease-in  infinite;
+        background-image: linear-gradient(rgb(237, 177, 65),rgb(237, 224, 77),rgb(239, 124, 43));
+    */
+
+    .menu-btn{
+        background: url("https://tse3.mm.bing.net/th?id=OIP.a15dnnUfd1Fn-wDt_uTgXQHaFj&pid=Api&P=0");
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.4s ease;
+
+
+
+    }
+    .menu-btn.active{
+        z-index: 999;
+        background: url(menubtn.jpg)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+
+    }
+    @keyframes animate{
+        0%,25%,30%{
+            background: #fff;
+        }
+        40%,50%{
+            background-image: red;
+        }
+        80%,90%,100%{
+            background: #fff;
+        }
+    }
+    @keyframes slide {
+        0%{
+           /* background-image: linear-gradient(rgb(116, 60, 219),rgb(129, 8, 204),rgb(215, 24, 240));*/
+            background-color: #222;
+        }
+        50%{
+          /*  background-image: linear-gradient(rgb(92, 60, 219),rgb(93, 8, 204),rgb(182, 24, 240));*/
+            background-color: aquamarine;
+        }
+        100%{
+          /*  background-image: linear-gradient(rgb(116, 60, 219),rgb(129, 8, 204),rgb(215, 24, 240));*/
+            background-color: aliceblue;
+        }
+    }
+    
+    .hero{
+        width: 100%;
+        height: 100vh;
+        background: url(Cool-Nature-Backgrounds-For-Desktop-2048x1174.jpg)no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 0;
+        
+    }
+    .hero::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        background-color: rgba(100, 243, 157, 0.742);
+        z-index: -1;
+
+
+    }
+    .main-heading{
+        color: white;
+        line-height: 1;
+        text-shadow: 1px 1px 1rem rgba(0,0,0,.5);
+        margin-bottom: 2.5rem;
+
+    }
+    .title{
+        font-size: 4.8rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+
+    }
+    .subtitle{
+        font-size: 3.6rem;
+        font-weight: 300;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    }
+    .btn{
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: .5rem 3.5rem;
+        border : none;
+        border-radius: 10rem;
+        display: inline-flex;
+        align-items: center;
+
+
+        
+    }
+    .btn-gradient{
+        background-image: linear-gradient(rgb(246, 158, 26),rgb(209, 247, 56),rgb(191, 61, 251));
+
+    }
+    .btn-gradient:hover{
+        background-image: linear-gradient(rgb(191, 61, 251),rgb(246, 158, 26),rgb(209, 247, 56),);
+    }
+
+}

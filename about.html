@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+header .brand img{
+    background: rgba(225, 0, 255, 0.782);
+    width: 60px;
+
+}
+header .navigation{
+    position: relative;
+}
+header .navigation .navigation-items a{
+    position: relative;
+    color: #ffff;
+    font-size: 1em;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+
+}
+header .navigation .navigation-items a:before{
+  content: '';
+  position: absolute;
+  background: #ffff;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+
+}
+header .navigation .navigation-items a:hover:before{
+
+    width: 100%;
+}
+section{
+   padding:  100px 200px;
+}
+.content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+.content .photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .photo img{
+    width: 50%;
+}
+.content .photo h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    font-weight: 800;
+    
+
+}
+.content .story{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-right: 3px;
+}
+.content .story img{
+    width: 30%;
+}
+.content .story p{
+    letter-spacing: 0.9px;
+    font-style: normal;
+    margin-right: 14px;
+    margin-bottom: 20px;
+    word-spacing: 10px;
+    text-transform: capitalize;
+}
+.container .box img{
+    margin-top: 10px;
+    width: 250px;
+    background: rgba(255,255,255,.5);
+}
+.container {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-gap: 10px;
+}
+.container .box p{
+    font-family: cursive;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    
+    color: #ffffff;
+}
+.box{
+    border: none;
+    color: #161313;
+    text-align: center;
+   /* background:linear-gradient(rgb(10, 229, 54),rgb(118, 248, 38),rgb(214, 230, 32),rgb(218, 247, 58),rgb(255, 146, 4));*/
+    border-radius: 8px;
+}
+.box:hover{
+    box-shadow: 0 0 10px white, 0 0 20px  rgb(204, 185, 185) , 0 0 40px rgb(149, 220, 238);
+    background-image: linear-gradient(rgb(116, 60, 219),rgb(129, 8, 204),rgb(215, 24, 240));
+}
+.aboutfounder{
+    padding: 200px 100px;
+    text-align: center;
+}
+.aboutfounder img{
+    width: 30%;
+}
+.aboutfounder h2{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.aboutfounder h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.slinks a{
+    text-decoration: none;
+    padding: 10px;
+    color: blueviolet;
+
+}
+.slinks{
+    margin-top: 20px;
+}
+.aboutfounder p{
+    margin-top: 17px;
+}
+::-webkit-scrollbar{
+    width: 0.3px;
+    height: 23px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: blueviolet;
+}
+::-webkit-scrollbar-track{
+    background: black;
+}
+
+@media (max-width:1040px){
+header{
+        padding: 12px 20px;
+    }
+    section{
+        padding: 100px 20px;
+    }
+    header .navigation{
+      display: none;
+    }
+    header .navigation.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1,1,1,0.5);
+  
+      }
+    header .navigation .navigation-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+    header .navigation.active .navigation-items{
+        background: #fff;
+        width: 500px;
+        max-width: 500px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgb(246, 244, 244), 0 0 20px rgb(234, 210, 210), 0 0 40px rgb(149, 187, 238);
+
+    }
+    header .navigation .navigation-items{
+          animation: animate 10s ease-in  infinite;
+    }
+    .content .story{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.aboutfounder img{
+    min-width:118 px;
+    min-height:  209 px;
+}
+
+
+}
+.bcontainer{
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/48bd5d62262041.5a8af0c73f4c6.jpg")no-repeat;
+    
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .containerb {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+</style>
+<body>
+<div class = bcontainer>
+    
+    <header>
+        <a href="#" class="brand"><img src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/travel-logo-design.jpg" alt="" ></a>
+        <div class="menu-btn">
+               
+        </div>
+        <div class="navigation">
+            
+            <div class="navigation-items">
+                <a href="home.html">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="hotel.html">HOTELS</a>
+                <a href="#">FAQ</a>
+                <a href="login.html">LOGIN/SIGNUP</a>
+            </div>
+        </div>
+    </header>
+    <section class="content">
+        
+        <div class="photo">
+            <h2 style="color: #fff;">Our Story</h2>
+            <img src="" alt="" width="10%">
+        </div>
+        <div class="story">
+            
+            <p style="color: #fff;">IN 2005 we opened our  doors in Chennai with a clear focus on customer service ae we offered
+                that very first completee vacation package.Soon after, we were helping people discover the world
+                with international trips.Today from bein ga part of one of the worlds largest travel 
+                companies. Our commitment to create connections,providing one-on-service and crafting the perfect vacation
+                remains stronger than ever
+            </p>
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/48bd5d62262041.5a8af0c73f4c6.jpg"alt="">
+        </div>
+    </section>
+    
+    <section class="comments"  style="background:linear-gradient(rgb(125, 0, 150),rgb(239, 1, 216),rgb(14, 24, 222),rgb(20, 223, 238));">
+        <h3 style="text-align: center; margin-bottom: 40px; color: #fff; font-size: 2rem;">PEOPLE"S COMPLIMENT</h3>
+        <div class="container">
+            
+            <div class="box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad fugit, nihil ipsam eum consequatur id corrupti dolore, iste, architecto quisquam est delectus in temporibus explicabo! Fugit excepturi quisquam officiis aut!</p>
+                <img src="johndae1.jpg" alt="">
+            </div> 
+            <div class="box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad fugit, nihil ipsam eum consequatur id corrupti dolore, iste, architecto quisquam est delectus in temporibus explicabo! Fugit excepturi quisquam officiis aut!</p>
+                <img src="https://tse2.mm.bing.net/th?id=OIP.PZsMLTIgXaEsdCA0VjTo7gHaLH&pid=Api&P=0" alt="">
+            </div>
+            <div class="box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad fugit, nihil ipsam eum consequatur id corrupti dolore, iste, architecto quisquam est delectus in temporibus explicabo! Fugit excepturi quisquam officiis aut!</p>
+                <img src="johndae3.jpg" alt="">
+            </div>
+            <div class="box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad fugit, nihil ipsam eum consequatur id corrupti dolore, iste, architecto quisquam est delectus in temporibus explicabo! Fugit excepturi quisquam officiis aut!</p>
+                <img src="https://c.pxhere.com/photos/dd/a6/business_man_businessman_corporate_suit_executive_successful_entrepreneur-675843.jpg!d" alt="">
+            </div>
+            <div class="box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad fugit, nihil ipsam eum consequatur id corrupti dolore, iste, architecto quisquam est delectus in temporibus explicabo! Fugit excepturi quisquam officiis aut!</p>
+                
+                <img src="janedoe.jpg" alt="">
+            </div>
+            <div class="box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad fugit, nihil ipsam eum consequatur id corrupti dolore, iste, architecto quisquam est delectus in temporibus explicabo! Fugit excepturi quisquam officiis aut!</p>
+                <img src="janedoe3.jpg" alt="">
+            </div>
+        </div>
+    </section>
+</div>
+<section>
+    <div class="aboutfounder">
+        <h2>Our Founder</h2>
+        <img src="RMBOSS.webp" alt="">
+        <h3>Mr.XXXXXXX</h3>
+        <div class="slinks">
+            <a href="#">Linkedin</a>
+            <a href="#">Instagram</a>
+            <a href="#">FaceBook</a>
+        </div>
+        <p>He is an entrepreneur, calm minded business man and very good person</p>
+    </div>
+    
+</section>
+<footer>
+    <div class="containerb">
+      <nav>
+        <ul>
+          
+          
+          
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </nav>
+      <br>
+      <p>&copy; 2023 Example Company. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
