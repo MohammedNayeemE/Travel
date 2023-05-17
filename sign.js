@@ -20,7 +20,7 @@ sign.addEventListener('submit',function(event){
     if(check){
     localStorage.setItem('username',user);
     localStorage.setItem('password',pass);
-    window.location.href="file:///C:/Users/mnaye/Desktop/PROJECT/login.html";
+    window.location.href="login.html";
     }
     else{
         alert("enter the details correctly");

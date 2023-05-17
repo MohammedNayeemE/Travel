@@ -12,7 +12,8 @@ form.addEventListener('submit',function(event){
 
 
     if(username === user && password === pass){
-        window.location.href = 'file:///C:/Users/mnaye/Desktop/PROJECT/home.html';
+        alert("YOU'VE SUCCESSFULLY LOGGED IN");
+        window.location.href = 'home.html';
     }
     else{
         alert('incorrect username');

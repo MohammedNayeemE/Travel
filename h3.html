@@ -1,12 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hotel 3</h1>
-</body>
+<html>
+  <head>
+    <title>HOTEL</title>
+    <style>
+      /* Center the page content */
+      
+
+      /* Set the width of the container */
+      .container {
+        width: 80%;
+        display: flex;
+        flex-direction: column-reverse;
+        
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 60px;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+
+      /* Set the width of the photo */
+      .photo {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      /* Set the width of the text */
+      .text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      /* Style the heading */
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Style the paragraph */
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-align: center;
+      }
+      header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+header .brand img{
+    background: rgba(225, 0, 255, 0.782);
+    width: 60px;
+
+}
+header .navigation{
+    position: relative;
+}
+header .navigation .navigation-items a{
+    position: relative;
+    color: #403737;
+    font-size: 1em;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+
+}
+header .navigation .navigation-items a:before{
+  content: '';
+  position: absolute;
+  background: #d7c4c4;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+
+}
+header .navigation .navigation-items a:hover:before{
+
+    width: 100%;
+}
+.btn{
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .5rem 3.5rem;
+    border : none;
+    border-radius: 10rem;
+    display: inline-flex;
+    align-items: center;
+    
+
+    
+}
+.btn-gradient{
+    background-image: linear-gradient(rgb(101, 243, 58),rgb(56, 247, 238),rgb(61, 146, 251));
+    margin-top: 27px;
+    margin-bottom: 7px;
+    text-decoration: none;
+
+}
+
+   </style>
+  </head>
+  <body>
+    <header>
+        <a href="#" class="brand"><img src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/travel-logo-design.jpg" alt="" ></a>
+        <div class="menu-btn">
+               
+        </div>
+        
+    </header>
+    <div class="container">
+      <a href="pay.html" class="btn btn-gradient">
+        Book Now
+        
+       </a>
+      <img class="photo" src="https://www.eroshotels.co.in/wp-content/uploads/2018/04/606x368.jpg" alt="Random photo" />
+      
+      <div class="text">
+        <h1>SERENITY SANDS</h1>
+        <p>
+          Serenity Sands: Serenity Sands is a charming coastal retreat situated along a pristine sandy beach. The hotel's coastal-inspired decor and cozy rooms create a soothing atmosphere for relaxation. Guests can enjoy various activities such as beach volleyball, water sports, or simply unwind by the fire pit while taking in the breathtaking sunset views.
+        </p>
+      </div>
+      
+    </div>
+   
+     
+    <footer>
+        <div class="containerb">
+          <nav>
+            <ul>
+              
+              
+              
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+          </nav>
+          <br>
+          <p>&copy; 2023 Luxary Travels. All rights reserved.</p>
+        </div>
+      </footer>
+  </body>
 </html>
